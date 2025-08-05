@@ -1,0 +1,14 @@
+{
+  "Aliases": [
+    {
+      "NewName": "phased.CustomAntennaElement",
+      "OldNames": "customAntennaElement",
+      "WarnOnOldName": false
+    },
+    {
+      "NewName": "phased.IsotropicAntennaElement",
+      "OldNames": "isotropicAntennaElement",
+      "WarnOnOldName": false
+    }
+  ]
+}

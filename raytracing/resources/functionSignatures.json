@@ -1,0 +1,125 @@
+{
+"comm.Ray":
+  {
+    "inputs":
+    [
+        {"name":"PathSpecification", "kind":"namevalue", "type":"choices={'Locations','Delay and angles'}"},
+        {"name":"CoordinateSystem", "kind":"namevalue", "type":"choices={'Cartesian','Geographic'}"},
+        {"name":"PathLossSource", "kind":"namevalue", "type":"choices={'Free space model','Custom'}"},
+        {"kind":"properties","type":["comm.Ray"]}
+    ]
+  },
+"raypl":
+  {
+     "inputs":
+     [
+         {"name":"ray","kind":"required","type":["comm.Ray"]},
+         {"name":"ReflectionMaterials","kind":"namevalue","type":[["choices={'concrete','brick','wood','glass','metal','plywood','marble','water','vegetation','loam','perfect-reflector','plasterboard','ceiling-board','chipboard','floorboard'}"],"numeric"]},
+         {"name":"TransmitterPolarization","kind":"namevalue","type":[["choices={'V','H','LHCP','RHCP','none'}"],"double"]},
+         {"name":"ReceiverPolarization","kind":"namevalue","type":[["choices={'V','H','LHCP','RHCP','none'}"],"double"]},
+         {"name":"TransmitterAxes","kind":"namevalue","type":["double"]},
+         {"name":"ReceiverAxes","kind":"namevalue","type":["double"]}
+     ]
+  },
+"buildingMaterialPermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'vacuum','concrete','brick','plasterboard','wood','glass','ceiling-board','chipboard','plywood','marble','floorboard','metal','very-dry-ground','medium-dry-ground','wet-ground'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'pure-water'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'sea-water'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]},
+         {"name":"salinity","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'pure-ice'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'wet-ice'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"waterVolumeFraction","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'multi-year-ice'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]},
+         {"name":"airVolumeFraction","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'dry-snow'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]},
+         {"name":"drySnowDensity","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'wet-snow'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]},
+         {"name":"drySnowDensity","kind":"required","type":["numeric"]},
+         {"name":"waterVolumeFraction","kind":"required","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'soil'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]},
+         {"name":"sandPercentage","kind":"required","type":["numeric"]},
+         {"name":"clayPercentage","kind":"required","type":["numeric"]},
+         {"name":"specificGravity","kind":"required","type":["numeric"]},
+         {"name":"volumetricWaterContent","kind":"required","type":["numeric"]},
+         {"name":"bulkDensity","kind":"positional","type":["numeric"]}
+     ]
+  },
+"earthSurfacePermittivity":
+  {
+     "inputs":
+     [
+         {"name":"material","kind":"required","type":["choices={'vegetation'}"]},
+         {"name":"frequency","kind":"required","type":["numeric"]},
+         {"name":"temperature","kind":"required","type":["numeric"]},
+         {"name":"gravimetricWaterContent","kind":"required","type":["numeric"]}
+     ]
+  }
+}
+     

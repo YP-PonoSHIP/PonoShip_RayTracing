@@ -1,0 +1,32 @@
+{
+    "phased.CustomAntennaElement":
+    {
+        "inputs":
+        [
+            {"kind":"varargin","type":["phased.CustomAntennaElement"]}
+        ]
+    },
+
+    "phased.IsotropicAntennaElement":
+    {
+        "inputs":
+        [
+            {"kind":"varargin","type":["phased.IsotropicAntennaElement"]}
+        ]
+    },
+
+
+    "patternCustom":
+    {
+        "inputs":
+        [
+            {"name":"MagE","kind":"required","type":["numeric","2d"]},
+            {"name":"theta","kind":"required","type":["numeric","vector"]},
+            {"name":"phi","kind":"required","type":["numeric","vector"]},
+            {"name":"CoordinateSystem","kind":"namevalue","type": ["choices = {'polar','rectangular'}"]},
+            {"name":"Slice","kind":"namevalue","type": ["choices = {'phi', 'theta'}"]},
+            {"name":"SliceValue","kind":"namevalue","type":["numeric","vector"]},
+            {"name":"PatternOptions","kind":"namevalue","type": ["PatternPlotOptions"]}
+        ]
+    }
+}
